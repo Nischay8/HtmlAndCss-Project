@@ -82,3 +82,12 @@ body{
     letter-spacing: -0.5px;
     margin-bottom: 3.2rem;
 }
+.btn:link,.btn:visited {
+    display: inline-block;
+    background-color: #e67e22;
+    font-size: 2rem;
+    color: #fff;
+    padding: 1.6rem 3.2rem;
+    border-radius: 15px;
+    text-decoration: none;
+}
