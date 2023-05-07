@@ -551,23 +551,25 @@
 }
 
 /* Footer Section Start */
-.footer{
+.footer {
   padding: 9.6rem 0;
 }
 
-.footer-heading{
+.footer-heading {
   font-size: 1.8rem;
   font-weight: 500;
   margin-bottom: 3.2rem;
 }
-.footer-nav{
+
+.footer-nav {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
 }
+
 .footer-link:link,
-.footer-link:visited{
+.footer-link:visited {
   text-decoration: none;
   font-size: 1.6rem;
   color: #767676;
@@ -575,23 +577,38 @@
 }
 
 .footer-link:hover,
-.footer-link:active{
+.footer-link:active {
   color: #555;
 }
 
-.social-links{
+.social-links {
   list-style: none;
   display: flex;
 }
-.copy-right{
+
+.copy-right {
   font-size: 1.4rem;
   color: #767676;
   line-height: 1.6rem;
   margin-top: auto;
 }
-.contacts{
+
+.contacts {
   font-style: normal;
   font-size: 1.6rem;
   line-height: 1.6;
 
+}
+
+@media(max-width:1200px) {
+  .section-hero {
+    background-color: red;
+  }
+}
+
+@media(max-width:600px){
+  .section-hero{
+    border: 20px dashed blue;
+    background-color: blue;
+  }
 }
