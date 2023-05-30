@@ -232,5 +232,5 @@ Header Section Start
     gap: 3rem;
 }
 .bio-progress-bar{
-
+display: flex;
 }
