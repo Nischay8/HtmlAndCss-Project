@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Work+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700&family=Poppins:wght@500;600;700;800&family=Rufina:wght@400;700&family=Work+Sans:wght@400;500&display=swap");
 
 * {
     margin: 0;
@@ -15,23 +15,26 @@
     --helper-tint: #f3f4ff;
     --bg: rgb(249 249 255);
     --gradient: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
-    --shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);
-    --gradientsupport: -webkit-linear-gradient(0deg,
-            rgb(132 144 255) 0%,
-            rgb(98 189 252) 100%);
-    --shadowSupport: 0px 20px 20px 0px rgb(132 144 255/30%);
+    --shadpw: 0px 0px 20px 0px rgb(132 144 255 / 20%);
 }
+
+/* spacing 
+desktop = 4.8rem */
 
 html {
     font-size: 62.5%;
+    font-family: "Work Sans", sans-serif;
 }
 
-/* 1rem=10px */
+body {
+    overflow-x: hidden;
+}
 
 h1,
 h2,
 h3,
 h4 {
+    font-family: "Rufina", serif;
     font-family: "Poppins", sans-serif;
 }
 
@@ -41,44 +44,97 @@ h1 {
     font-weight: 600;
 }
 
-h3 {
-    font-size: 1.8rem;
-    font-weight: 400;
-}
-
 p {
     color: var(--para);
     line-height: 1.6;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
+
+    /* word-spacing: 0.1rem; */
 }
 
 a {
-    text-decoration: none
+    text-decoration: none;
 }
 
 li {
     list-style: none;
 }
 
-/* 
+.btn {
+    background: -webkit-linear-gradient(0deg,
+            rgb(132 144 255) 0%,
+            rgb(98 189 252) 100%);
+
+    padding: 1.6rem 3.2rem;
+    border: none;
+    color: rgb(255 255 255);
+    display: inline-block;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    position: relative;
+}
+
+.btn:hover {
+    box-shadow: 0px 20px 20px 0px rgb(132 144 255 / 30%);
+    color: rgb(255 255 255);
+}
+
+.section {
+    padding: 9rem 0;
+}
+
+.container {
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    gap: 9rem;
+}
+
+.grid-two-col {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three-col {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four-col {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* ===========================================
 Header Section Start
-*/
+======================================= */
+
 .header {
     padding: 0 4.8rem;
     height: 10rem;
-    background-color: var(--bg);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: var(--bg);
+    /* background-color: #e7f5ff; */
 }
 
 .header .logo {
+    /* width: 15%; */
     height: 3rem;
 }
 
 .navbar-lists {
     display: flex;
     gap: 4.8rem;
+    list-style: none;
 }
 
 .navbar-link:link,
@@ -88,9 +144,9 @@ Header Section Start
     font-size: 1.8rem;
     font-weight: 500;
     text-transform: uppercase;
-    color: var(--black);
-    transition: color 0.3s linear;
-
+    color: #212529;
+    transition: all 0.3s;
+    font-family: "Poppins", sans-serif;
 }
 
 .navbar-link:hover,
@@ -98,40 +154,59 @@ Header Section Start
     color: var(--helper);
 }
 
-/* Hero Section Start */
-
-/* Reusable Code  */
-.container {
-    max-width: 140rem;
-    margin: 0 auto;
+.mobile-navbar-btn {
+    /* by default for normal screen we want to hide  */
+    display: none;
+    background: transparent;
+    cursor: pointer;
+    border: none;
 }
 
-.section {
-    padding: 9rem 0;
+.mobile-nav-icon {
+    width: 5rem;
+    height: 5rem;
+    color: #212529;
 }
 
-.grid {
-    display: grid;
-    gap: 9rem;
+/* for desktop or mobile menu-outline one must be visible  
+and we need to hide the close menu icon
+*/
+.mobile-nav-icon[name="close-outline"] {
+    display: none;
 }
 
-.grid-two-column {
-    grid-template-columns: repeat(2, 1fr);
+/* sticky Navbar */
+.sticky .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 8rem;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    padding-top: 0;
+    padding-bottom: 0;
 }
+
+/* ===========================================
+Hero  Section Start
+======================================= */
 
 .section-hero {
-    background-color: var(--bg);
+    background: var(--bg);
 }
 
 .section-hero-data {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
+    align-items: flex-start;
 }
 
 .hero-top-data {
     text-transform: uppercase;
+    color: var(--heading);
     font-weight: 500;
     font-size: 1.5rem;
     color: var(--helper);
@@ -149,38 +224,20 @@ Header Section Start
     max-width: 60rem;
 }
 
-.section-hero-img {
+.section-hero-image {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .hero-img {
     max-width: 80%;
+    z-index: 1;
 }
 
-.btn {
-    background: var(--gradientsupport);
-    padding: 1.6rem 3.2rem;
-    border: none;
-    color: var(--helper-tint);
-    display: inline-block;
-    text-transform: uppercase;
-    font-size: 1.8rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease 0;
-    -moz-transition: all 0.3s ease 0;
-
-}
-
-.btn:hover,
-.btn:active {
-    box-shadow: var(--shadowSupport);
-}
-
-/* BIO SECTION START */
+/* ===========================================
+ Bio Data Section Start
+======================================= */
 
 .bio-image {
     display: flex;
@@ -189,15 +246,14 @@ Header Section Start
 }
 
 .bio-image img {
-    width: 80%;
-    box-shadow: -2rem -2rem 0 0 var(--helper);
     display: inline-block;
-
+    width: 80%;
+    box-shadow: -2rem -2rem 0rem 0rem var(--helper);
 }
 
 .common-heading {
     font-size: 4.8rem;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 6rem;
     text-transform: capitalize;
     position: relative;
@@ -206,87 +262,89 @@ Header Section Start
 .common-heading::before {
     content: "";
     position: absolute;
-    top: 110%;
+    top: 120%;
     left: 0;
     width: 1.5rem;
     height: 1.5rem;
-    background: var(--helper);
     border-radius: 50%;
+    background: var(--helper);
 }
 
 .common-heading::after {
     content: "";
     position: absolute;
-    top: 118%;
+    top: 128%;
     left: 1.5rem;
-    min-width: 20rem;
+    width: 30%;
     height: 0.3rem;
     background: var(--helper);
 }
 
-.bio-data-stats{
-    display: flex;
+.bio-data-stats {
     padding: 6.4rem 0;
+    display: flex;
     flex-direction: column;
     gap: 3rem;
 }
-.bio-progress-bar{
-    width: 90%;
-    height: 0.8rem;
-    background-color: var(--para-tint);
-    border-radius: 10rem;
-    position: relative;
-    box-shadow: var(--shadow);
-}
-.bio-stats h3{
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
     margin-bottom: 1rem;
 }
-.bio-progress-bar::before{
+
+.bio-progress-bar {
+    width: 90%;
+    height: 0.8rem;
+    /* background: var(--para); */
+    background-color: rgb(233 236 239);
+    border-radius: 10rem;
+    position: relative;
+    box-shadow: var(--shadpw);
+    /* overflow: hidden; */
+}
+
+.bio-progress-bar::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 80%;
     height: inherit;
-    background: var(--gradientsupport);
+    background: -webkit-linear-gradient(0deg,
+            rgb(132 144 255) 0%,
+            rgb(98 189 252) 100%);
     border-radius: 10rem;
 }
-.bio-progress-2::before{
-    width: 99%;
-}
-.bio-progress-3::before {
-    width: 65%;
-}
-.bio-progress-4::before {
-    width: 85%;
-}
-.bio-progress-5::before {
-    width: 70%;
-}
-.bio-progress-2::before {
-    width: 99%;
+
+/* to create the rectangle box  */
+.bio-progress-bar span {
+    position: absolute;
+    top: 1.8rem;
+    left: 76%;
+    width: 4rem;
+    height: 2rem;
+    background: var(--helper);
+    color: var(--third);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
 }
 
-.bio-progress-bar span{
-position: absolute;
-top: 1.8rem;
-width:4rem;
-height: 2rem;
-background: var(--helper);
-color: var(--white);
-display: flex;
-justify-content: center;
-border: none;
-align-items: center;
-outline: 0;
+/* to create the traingle or caret symbol  */
+.bio-progress-bar span::after {
+    content: "";
+    position: absolute;
+    top: -1.6rem;
+    width: 0rem;
+    height: 0rem;
+    border: 0.8rem solid var(--helper);
+    border-color: transparent;
+    border-bottom-color: var(--helper);
 }
 
-.bio-progress-bar span{
-    left: 80%;
-}
-.bio-progress-bar-2 span {
-    left: 80%;
-}
-.bio-progress-bar-3 span {
-    left: 80%;
-}
+
+

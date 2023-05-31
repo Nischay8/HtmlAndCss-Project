@@ -2,118 +2,143 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nischay technical</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="my portfolio website to showcase the work I have done so far, the services I provide and all my professionals life.">
+    <title>Nischay Portfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-
     <header class="header">
-        <img src="images/logo.png" alt="our main logo" class="logo" />
+        <img src="images/logo.png" alt="thapa technical logo" class="logo" />
         <nav class="navbar">
             <ul class="navbar-lists">
+                <li><a class="navbar-link home-link" href="#">Home</a></li>
+                <li><a class="navbar-link about-link" href="/about.html">About</a></li>
+                <li><a class="navbar-link service-link" href="/service.html">Services</a></li>
+                <li><a class="navbar-link portfolio-link" href="#portfolio-section">Portfolio</a></li>
                 <li>
-                    <a href="#" class="navbar-link homelink">Home</a>
-                </li>
-                <li>
-                    <a href="#" class="navbar-link about-link">About</a>
-
-                </li>
-                <li>
-                    <a href="#" class="navbar-link service-link">Services</a>
-
-                </li>
-                <li>
-                    <a href="#" class="navbar-link portfolio-link">prtfolio</a>
-
-                </li>
-                <li>
-                    <a href="#" class="navbar-link contact-link">Contact</a>
-
+                    <a class="navbar-link" href="/contact.html" target="_blank">Contact</a>
                 </li>
             </ul>
-
         </nav>
+
+        <div class="mobile-navbar-btn">
+            <ion-icon class="mobile-nav-icon" name="menu-outline" class="mobile-nav-icon"></ion-icon>
+
+            <ion-icon class="mobile-nav-icon" name="close-outline" class="mobile-nav-icon"></ion-icon>
+        </div>
     </header>
-    <!-- Hero Section -->
+
+    <!-- ======================================== 
+          Our Main Hero Section Start  
+    ========================================  -->
     <main>
         <section class="section-hero section">
-            <div class="container grid grid-two-column">
+            <div class="container grid grid-two-col">
                 <div class="section-hero-data">
-                    <p class="hero-top-data">
-                        This is Me
-                    </p>
-                    <h1 class="hero-heading">
-                        Nischay Technical
-                    </h1>
+                    <p class="hero-top-data">this is me</p>
+                    <h1 class="hero-heading">Nischay Technical</h1>
                     <p class="hero-para">
-                        I'm Nischay Sinha. A full Stack Developer,Youtuber and Freelancer. A Full stack
-                        developer,Youuber and Freelancer.
+                        I'm Nischay Sinha. A Full stack Developer, youtuber and
+                        freelancer. A Full stack Developer, youtuber and freelancer.
                     </p>
                     <div>
-                        <a href="#" class="btn hireme-btn">Hire me</a>
-
+                        <a href="#" target="_blank" class="btn hireme-btn">Hire Me</a>
                     </div>
                 </div>
+
                 <div class="section-hero-image">
-                    <img src="images/hero.jpg" alt="This is Me Nischay Technical" class="hero-img">
+                    <img src="images/hero.jpg" alt="hero image" class="hero-img" />
                 </div>
             </div>
         </section>
     </main>
 
-<!-- OUR BIO DATA SECTION START  -->
-<section class="section-bio-data section">
-    <div class="container grid grid-two-column">
-        <div class="bio-image">
-            <img src="images/biodata.jpg" alt="my bio-data images">
-        </div>
-        <div class="bio-data">
-            <h2 class="common-heading">My Bio Data</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque eligendi labore quod fugiat ipsum illo iusto. Velit eius doloremque ea animi. Rem aliquam necessitatibus in assumenda. Laborum nam neque eveniet?</p>
-            <br>
-            <p>itaque voluptas nesciunt cum dolorum.Quidem sed id repellat facere quod placeat prasentium.</p>
-            <div class="bio-data-stats">
-                <div class="bio-stats">
-                    <h3>Design</h3>
-                    <div class="bio-progress-bar">
-                        <span>80%</span>
-                    </div>
-                </div>
-                <div class="bio-stats">
-                    <h3>HTML</h3>
-                    <div class="bio-progress-bar bio-progress-2">
-                        <span>100%</span>
-                    </div>
-                </div>
-                <div class="bio-stats">
-                    <h3>Css</h3>
-                    <div class="bio-progress-bar bio-progress-3">
-                        <span>95%</span>
-                    </div>
-                </div>
-                <div class="bio-stats">
-                    <h3>Javascript</h3>
-                    <div class="bio-progress-bar bio-progress-4">
-                        <span>90%</span>
-                    </div>
-                </div>
-                <div class="bio-stats">
-                    <h3>MERN</h3>
-                    <div class="bio-progress-bar bio-progress-5">
-                        <span>85%</span>
-                    </div>
-                </div>
+    <!-- ======================================== 
+           Bio Data Section Start  
+    ========================================  -->
+    <section class="section-biodata section">
+        <div class="container grid grid-two-col">
+            <div class="bio-image">
+                <img src="images/biodata.jpg" alt="bio data image" />
             </div>
-            <div class="bio-data-btn">
-                <a href="#" class="btn">Download CV</a>
-            </div>
-        </div>
-    </div>
-</section>
-</body>
+            <div class="bio-data">
+                <h2 class="common-heading">my bio-data</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
+                    natus eum quibusdam, blanditiis nobis dolor distinctio asperiores
+                    itaque voluptas nesciunt cum dolorum. Quidem sed id repellat facere
+                </p>
+                <br />
+                <p>
+                    itaque voluptas nesciunt cum dolorum. Quidem sed id repellat facere
+                    quod placeat praesentium.
+                </p>
 
+                <div class="bio-data-stats">
+                    <div class="bio-stats">
+                        <h3>Design</h3>
+                        <div class="bio-progress-bar">
+                            <span>80%</span>
+                        </div>
+                    </div>
+                    <div class="bio-stats">
+                        <h3>HTML</h3>
+                        <div class="bio-progress-bar bio-progress-2">
+                            <span>99%</span>
+                        </div>
+                    </div>
+                    <div class="bio-stats">
+                        <h3>CSS</h3>
+                        <div class="bio-progress-bar bio-progress-3">
+                            <span>90%</span>
+                        </div>
+                    </div>
+                    <div class="bio-stats">
+                        <h3>JavaScript</h3>
+                        <div class="bio-progress-bar bio-progress-4">
+                            <span>85%</span>
+                        </div>
+                    </div>
+                    <div class="bio-stats">
+                        <h3>MERN</h3>
+                        <div class="bio-progress-bar bio-progress-5">
+                            <span>70%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bio-data-btn">
+                    <a href="https://drive.google.com/file/d/1vD_pIM24_j_fZXkYzEMShztar_EDWaSE/view?usp=sharing"
+                        class="btn" download> Downlaod CV </a>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- ======================================== 
+                   Our portfolio Section Start  
+            ========================================  -->
+            <section class="section section-portfolio" id="portfolio-section">
+                <div class="container">
+                    <h2 class="common-heading">Latest Works</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium neque amet ex alias rem quae, nesciunt repellat delectus, praesentium quo, reiciendis nulla est sed optio? Accusantium ratione minus sunt est?</p>
+                </div>
+                <div class="p-btns">
+                    <div class="btn p-btn" data-btn-num="1"></div>
+                    <div class="btn p-btn" data-btn-num="2"></div>
+                    <div class="btn p-btn" data-btn-num="3"></div>
+                </div>
+                <div class="container grid grid-three-col"></div>
+            </section>
+</body>
 </html>
