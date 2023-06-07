@@ -407,3 +407,13 @@ h3 {
     color: var(--third);
     text-decoration: none;
 }
+.p-image-not-active{
+    display: none;
+}
+.p-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+    gap: 1rem;
+}
