@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700&family=Poppins:wght@500;600;700;800&family=Rufina:wght@400;700&family=Work+Sans:wght@400;500&display=swap");
-
 * {
     margin: 0;
     padding: 0;
@@ -416,4 +415,21 @@ h3 {
     justify-content: center;
     margin-top: 10rem;
     gap: 1rem;
+}
+
+/* Work data section start */
+
+.section-work-data{
+    background: var(--gradient);
+    text-align: center;
+    transition: all 0.7s linear;
+    color: var(--bg);
+}
+.counter-numbers{
+    font-size: 4.8rem;
+}
+
+.section-work-data p{
+    color: var(--bg);
+    text-transform: capitalize;
 }
