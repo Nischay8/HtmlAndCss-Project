@@ -491,5 +491,10 @@ h3 {
     width: 90;
     height: 90%;
     background: var(--black);
-    border:1px solid  ;
+}
+
+.service-box h3{
+    text-transform: capitalize;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
 }
